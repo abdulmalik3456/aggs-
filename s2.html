@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>الخدمات القانونية المتعلقة بادارة الشركات</title>
-  <meta name="description" content="موقع شركة محاماة فخم — كحلي وذهبي، صفحات: رؤيتنا، من نحن، لماذا نحن، قيمنا، رسالة الرئيس التنفيذي." />
- <link rel="icon"  href="h1.png">
+ 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
@@ -53,9 +52,145 @@
     .menu-btn { background: transparent; border: 1px solid rgba(255,255,255,0.12); padding: 8px 12px; border-radius: 8px; color: #fff; cursor: pointer; transition: all 0.3s; }
     .menu-btn:hover { background: rgba(255,255,255,0.08); }
 
-    /* Footer */
-    footer { background: var(--navy-2); color: #eaf0f5; padding: 18px 20px; }
-    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+   /* Footer */
+footer {
+  background: var(--navy-2);
+  color: #eaf0f5;
+  padding: 25px 20px;
+  font-family: var(--font);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* العناوين */
+footer h4 {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+/* الفقرات */
+footer p.muted {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* قائمة الأيقونات */
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* يسمح بالالتفاف على الجوال */
+}
+
+footer ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  transition: transform 0.3s ease;
+}
+
+footer ul li a:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Responsive للجوال ===== */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* عمود واحد على الجوال */
+    gap: 20px;
+  }
+  footer ul {
+    justify-content: start; /* محاذاة الأيقونات للجانب الأيسر */
+    gap: 12px;
+  }
+  footer p.muted {
+    font-size: 13px;
+  }
+  footer h4 {
+    font-size: 16px;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* العناوين */
+footer h4 {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 18px;
+}
+
+/* الفقرات */
+footer p.muted {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* قائمة الأيقونات */
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* يسمح بالالتفاف على الجوال */
+}
+
+footer ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  transition: transform 0.3s ease;
+}
+
+footer ul li a:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Responsive للجوال ===== */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* عمود واحد على الجوال */
+    gap: 20px;
+  }
+  footer ul {
+    justify-content: start; /* محاذاة الأيقونات للجانب الأيسر */
+    gap: 12px;
+  }
+  footer p.muted {
+    font-size: 13px;
+  }
+  footer h4 {
+    font-size: 16px;
+  }
+}
 
     /* Floating WhatsApp */
     .whatsapp { position: fixed; bottom: 22px; left: 22px; z-index: 1200; display: flex; align-items: center; gap: 12px; background: linear-gradient(90deg, var(--gold), var(--gold-2)); color: var(--navy); padding: 12px 14px; border-radius: 999px; box-shadow: 0 8px 24px rgba(11,43,68,0.15); font-weight: 700; transition: transform 0.3s; }
@@ -94,13 +229,13 @@
 <body>
 
 </head>
-<body>
+
 
   <!-- زر فتح القائمة --> 
   <button id="menuToggle" 
   style=" position: fixed; 
-  top: 18px; 
-  right: 20px; /* بدل 1300px */
+  top: 17px; 
+  left: 20px; /* بدل 1300px */
   z-index: 1500; 
   background: rgba(255, 0, 0, 0); 
   color: rgb(255, 255, 255); 
@@ -285,7 +420,7 @@
           </div>
         </div>
         <div class="header-actions">
-        </button>
+     
       </div>
     </div>
   </div>
@@ -505,7 +640,7 @@
     <div class="container footer-grid">
       <div>
         <h4 style="margin:0 0 8px;color:var(--gold)">مكتب المحاماة</h4>
-        <p class="muted" style="color:#ffffff;">العنوان: الرياض - طريق الملك سلمان<br>هاتف: 2128 060 55 966+<br>البريد:  info@alammarlaw.com</p>
+        <p class="muted" style="color:#ffffff;">العنوان: الرياض - طريق الملك سلمان - برج الرميح<br>هاتف: 2128 060 55 966+<br>البريد:  info@alammarlaw.com</p>
       </div>
       <div>
   <h4 style="margin:0 0 8px;color:var(--gold)">روابط سريعة</h4>
@@ -558,9 +693,7 @@
 
   <script>
     // Side panel control
-    const openSide = document.getElementById('openSide');
-    const closeSide = document.getElementById('closeSide');
-    const sidepanel = document.getElementById('sidepanel');
+   
     openSide.addEventListener('click', ()=>{ sidepanel.classList.add('open'); sidepanel.setAttribute('aria-hidden','false'); });
     closeSide.addEventListener('click', ()=>{ sidepanel.classList.remove('open'); sidepanel.setAttribute('aria-hidden','true'); });
 
