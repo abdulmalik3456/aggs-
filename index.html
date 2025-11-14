@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>شركة عبدالاله العمار للمحاماة</title>
-  <meta name="description" content="موقع شركة محاماة فخم — كحلي وذهبي، صفحات: رؤيتنا، من نحن، لماذا نحن، قيمنا، رسالة الرئيس التنفيذي." />
+  <meta name="description" content="شركة عبدالإله العمار للمحاماة مكتب قانوني سعودي يقدم خدمات المحاماة والاستشارات القانونية للشركات والأفراد، مع خبرة في صياغة العقود والتقاضي وحل النزاعات." />
   <link rel="icon"  href="h1.png">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -80,9 +80,113 @@
     .value { flex: 1; min-width: 200px; background: linear-gradient(180deg,#fff,#fbfbfd); padding: 18px; border-radius: 12px; text-align: center; transition: transform 0.3s; }
     .value:hover { transform: scale(1.03); }
 
-    /* CEO message */
-    .ceo { background: var(--navy); color: #fff; padding: 48px; border-radius: 14px; display: flex; gap: 24px; align-items: center; }
-    .ceo img { width: 160px; height: 160px; border-radius: 12px; object-fit: cover; border: 6px solid rgba(255,255,255,0.06); }
+
+/* ======= CEO Message Section ======= */
+#ceo {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  background: var(--navy);
+}
+
+.cont {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.ceo {
+  background: var(--navy);
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap; /* مهم للجوال */
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.ceo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 6px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.ceo img:hover {
+  transform: scale(1.05);
+}
+
+.ceo div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.ceo h3 {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+}
+
+.ceo p.muted {
+  margin: 0 0 12px;
+  color: #c9a04b;
+  font-size: clamp(14px, 2.5vw, 17px);
+  line-height: 1.6;
+}
+
+.ceo div:last-child {
+  font-weight: 700;
+  opacity: 0.95;
+  font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/* ======= Responsive for Mobile ======= */
+@media (max-width: 768px) {
+  .ceo {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .ceo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ceo div {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceo {
+    padding: 25px 15px;
+    gap: 15px;
+  }
+
+  .ceo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ceo h3 {
+    font-size: 22px;
+  }
+
+  .ceo p.muted {
+    font-size: 14px;
+  }
+
+  .ceo div:last-child {
+    font-size: 16px;
+  }
+}
+
 
     /* Footer */
     footer { background: var(--navy-2); color: #eaf0f5; padding: 18px 20px; }
@@ -138,13 +242,13 @@
 <body>
 
 </head>
-<body>
+
 
   <!-- زر فتح القائمة --> 
   <button id="menuToggle" 
   style=" position: fixed; 
   top: 18px; 
-  right: 20px; /* بدل 1300px */
+  left: 30px; /* بدل 1300px */
   z-index: 1500; 
   background: rgba(255, 0, 0, 0); 
   color: rgb(255, 255, 255); 
@@ -361,13 +465,36 @@
   "></div>
 
   <div class="container" style="max-width:1000px;margin:auto;position:relative;z-index:2;">
-    <!-- العبارة الرئيسية -->
-    <h3 style="font-size:40px;color:#fff;margin-bottom:20px;">
-      شركة قانونية متكاملة تتمتع بفريق عمل ذو كفاءة وخبرة عالية تقدم الخدمات للشركات و الأفراد
-    </h3>
+    <h3 class="hero-title">
+  شركة قانونية متكاملة تتمتع بفريق عمل ذو كفاءة وخبرة عالية تقدم الخدمات للشركات و الأفراد
+</h3>
 
-    <!-- سنوات الخبرة -->
-    <h4 style="font-size:27px;color:#c8a54c;margin-bottom:60px;">ابدأ رحلتك القانونية معنا باختيار أحد الخيارات التالية</h4>
+<style>
+.hero-title {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  font-size: clamp(22px, 5vw, 40px); /* حجم يتغير حسب الشاشة */
+}
+</style>
+
+
+    <h4 class="hero-subtitle">
+  ابدأ رحلتك القانونية معنا باختيار أحد الخيارات التالية
+</h4>
+
+<style>
+.hero-subtitle {
+  color: #c8a54c;
+  margin-bottom: 60px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  font-size: clamp(16px, 4vw, 27px); /* حجم متغير حسب الشاشة */
+}
+</style>
 
  <!-- البوكسات -->
 <div class="services-wrapper">
@@ -416,32 +543,23 @@
 }
 
 
-/* الشبكة */
+/* الشبكة الأساسية */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 28px;
-  max-width: 950px; /* لتحديد عرض مناسب */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 950px;
   width: 90%;
   margin: 0 auto;
-  font-family: var(--font);
   justify-items: center;
-}
-
-/* على الجوال: عمودين */
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
 }
 
 /* البوكسات */
 .service-box {
   background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
   border: 1px solid rgba(255,255,255,0.15);
-  padding: 25px; /* ← تصغير بسيط للحجم الداخلي */
-  border-radius: 18px; /* ← حواف أكثر أناقة */
+  padding: 20px;
+  border-radius: 18px;
   text-align: center;
   color: #fff;
   font-weight: 600;
@@ -450,13 +568,13 @@
   box-shadow: 0 3px 20px rgba(0,0,0,0.18);
   position: relative;
   overflow: hidden;
-  min-width: 180px; /* ← كانت 200px */
-  max-width: 230px; /* ← كانت 260px */
+  min-width: 120px; /* أصغر قليلاً للجوال */
+  max-width: 200px;
   width: 100%;
-  font-size: 15px; /* ← تصغير طفيف للنص */
+  font-size: 14px;
 }
 
-
+/* حركة التأثير عند المرور */
 .service-box::before {
   content: "";
   position: absolute;
@@ -466,16 +584,36 @@
   transform: skewX(-20deg);
   transition: 0.6s;
 }
-
 .service-box:hover::before {
   left: 125%;
 }
-
 .service-box:hover {
   background: linear-gradient(145deg, var(--gold), #b78e35);
   color: var(--navy);
   transform: translateY(-6px) scale(1.03);
 }
+
+/* ======= الترتيب للجوال ======= */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين جنب بعض */
+    gap: 15px;
+  }
+  .service-box {
+    min-width: 140px;
+    max-width: 180px;
+    font-size: 13px;
+    padding: 18px;
+  }
+}
+
+/* لو حبيت أصغر الأجهزة جداً */
+@media (max-width: 375px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* عمود واحد فقط */
+  }
+}
+
 
 /* النافذة المنبثقة */
 .popup-overlay {
