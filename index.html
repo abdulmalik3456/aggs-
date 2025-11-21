@@ -296,23 +296,59 @@ footer ul li a:hover {
     .lang-switch { background: transparent; border: 1px solid rgba(255,255,255,0.12); color:#fff; padding: 6px 10px; border-radius:8px; cursor:pointer; }
     .menu-btn { background: transparent; border: 1px solid rgba(255,255,255,0.12); padding: 8px 12px; border-radius: 8px; color: #fff; cursor: pointer; transition: all 0.3s; }
     .menu-btn:hover { background: rgba(255,255,255,0.08); }
+
+
+
+    /* شكل البوكسين بشكل عادي */
+.vision-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* تنسيق داخلي للبوكس الثاني */
+.vision-flex {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* ————— نسخة الجوال ————— */
+@media (max-width: 600px) {
+  .vision-wrapper {
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 12px;
+  }
+
+  .vision-wrapper .card {
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .vision-flex h4 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .vision-flex p,
+  .vision p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* يمنع النص من النزول تحت بعض */
+  .vision-flex {
+    flex-direction: column;
+  }
+}
+
     
 
 
 
-    /* إجبار البوكسين يكونون جنب بعض في الجوال */
-@media (max-width: 576px) {
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important; /* عمودين */
-    gap: 15px;
-    align-items: stretch;
-  }
-
-  #vision .card {
-    padding: 20px;
-  }
-}
+    
 
 
   </style>
@@ -975,25 +1011,25 @@ document.getElementById('serviceForm').addEventListener('submit', async (e) => {
 
 
 
-  <!-- Vision -->
   <section id="vision">
-    <div class="container grid-2">
-      <div class="card vision">
-        <div class="section-title"><h3>رؤيتنا</h3></div>
-        <p class="muted">أن نكون مناصرين رائدين لاقتصاد سعودي مزدهر، وتمكين الشركات من خلال حلول قانونية مبتكرة مع تعزيز ثقافة الوعي القانوني، بما يتماشى مع رؤية المملكة 2030</p>
-      </div>
+  <div class="container grid-2 vision-wrapper">
+    <div class="card vision">
+      <div class="section-title"><h3>رؤيتنا</h3></div>
+      <p class="muted">أن نكون مناصرين رائدين لاقتصاد سعودي مزدهر، وتمكين الشركات من خلال حلول قانونية مبتكرة مع تعزيز ثقافة الوعي القانوني، بما يتماشى مع رؤية المملكة 2030</p>
+    </div>
 
-      <div class="card">
-        <div style="display:flex;gap:12px;align-items:center">
-          <div class="icon"></div>
-          <div>
-            <h4 style="margin:0 0 6px">رؤية استراتيجية</h4>
-            <p class="muted" style="margin:0">الالتزام بالقيم المهنية والريادة في تقديم الخدمات القانونية الرقمية والتقليدية.</p>
-          </div>
+    <div class="card vision-mobile">
+      <div class="vision-flex">
+        <div class="icon"></div>
+        <div>
+          <h4>رؤية استراتيجية</h4>
+          <p class="muted">الالتزام بالقيم المهنية والريادة في تقديم الخدمات القانونية الرقمية والتقليدية.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- About -->
   <section id="about">
