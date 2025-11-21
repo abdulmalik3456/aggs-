@@ -1,0 +1,15 @@
+/* ترتيب الخدمات للجوال */
+@media (max-width: 576px) {
+
+  /* خلي كل بوكس يشكل نص العرض = بوكسين جنب بعض */
+  #services .card {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  /* البوكس الثالث يخليه في النص لحاله */
+  #services .card:nth-child(3) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
