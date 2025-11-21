@@ -99,6 +99,18 @@
     .why-item { background: transparent; padding: 18px; border-radius: 12px; text-align: center; transition: transform 0.3s; }
     .why-item:hover { transform: translateY(-6px); }
     .why-item .ico { font-size: 30px; margin-bottom: 10px; color: var(--gold); }
+    /* Why us – في الجوال خليها 2 × 2 */
+@media (max-width: 576px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr); /* ← عمودين */
+    gap: 14px;
+  }
+
+  .why-item {
+    padding: 16px;
+  }
+}
+
 
     /* Values */
     .values { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -285,6 +297,23 @@ footer ul li a:hover {
     .menu-btn { background: transparent; border: 1px solid rgba(255,255,255,0.12); padding: 8px 12px; border-radius: 8px; color: #fff; cursor: pointer; transition: all 0.3s; }
     .menu-btn:hover { background: rgba(255,255,255,0.08); }
     
+
+
+
+    /* إجبار البوكسين يكونون جنب بعض في الجوال */
+@media (max-width: 576px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important; /* عمودين */
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  #vision .card {
+    padding: 20px;
+  }
+}
+
 
   </style>
 </head>
@@ -641,16 +670,18 @@ footer ul li a:hover {
 /* ======= الترتيب للجوال ======= */
 @media (max-width: 576px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* عمودين جنب بعض */
+    grid-template-columns: 1fr; /* ← بوكس واحد تحت الثاني */
     gap: 15px;
   }
+
   .service-box {
-    min-width: 140px;
-    max-width: 180px;
-    font-size: 13px;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 14px;
     padding: 18px;
   }
 }
+
 
 /* لو حبيت أصغر الأجهزة جداً */
 @media (max-width: 375px) {
@@ -1100,6 +1131,21 @@ document.getElementById('serviceForm').addEventListener('submit', async (e) => {
         <p style="color: #dcdcdc; font-size: 15.5px; line-height: 1.8;">نهج عمل منظم ودقيق يضمن أعلى معايير الجودة في الخدمة القانونية.</p>
       </div>
     </div>
+    <style>
+      /* قيمنا — في الجوال صفّين × صفّين */
+@media (max-width: 576px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* عمودين */
+    gap: 20px !important;
+  }
+
+  .value-card {
+    padding: 35px 20px !important;
+    text-align: center;
+  }
+}
+
+    </style>
   </div>
 
   <!-- خدماتنا -->
