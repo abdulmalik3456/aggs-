@@ -99,17 +99,45 @@
     .why-item { background: transparent; padding: 18px; border-radius: 12px; text-align: center; transition: transform 0.3s; }
     .why-item:hover { transform: translateY(-6px); }
     .why-item .ico { font-size: 30px; margin-bottom: 10px; color: var(--gold); }
-    /* Why us – في الجوال خليها 2 × 2 */
+    /* Why Us — نسخة الجوال */
 @media (max-width: 576px) {
   .why-grid {
-    grid-template-columns: repeat(2, 1fr); /* ← عمودين */
-    gap: 14px;
+    grid-template-columns: repeat(2, 1fr); /* بوكسين جنب بعض */
+    gap: 18px; /* المسافة بين البوكسات */
   }
 
   .why-item {
-    padding: 16px;
+    padding: 20px; /* زيادة البادينج لتعطي إحساس بالفخامة */
+    border-radius: 18px; /* زوايا أكثر نعومة */
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .why-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(212,182,58,0.25);
+  }
+
+  .why-item .ico {
+    font-size: 36px; /* أكبر قليلاً لجعل التصميم راقي */
+    margin-bottom: 12px;
+    color: var(--gold);
+  }
+
+  .why-item h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .why-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
   }
 }
+
 
 
     /* Values */
